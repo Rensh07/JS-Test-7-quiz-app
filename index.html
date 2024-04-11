@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="logo.png" alt="Quiz Logo..." />
+    </header>
+    <section class="screen screen-1 screen-show">
+        <div class="screen-1-container">
+            <h1>Let's Play Quiz !</h1>
+            <form action="#" class="form">
+                <div class="form-field f-f-question">
+                    <label class="label-input" for="question">Enter Number of questions</label>
+                    <input placeholder="Maximum question 30" type="number" maxlength="2"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        autocomplete="off" name="question" id="question">
+                    <p class="error-txt hidden"></p>
+                </div>
+                <div class="form-field  f-f-category">
+                    <label class="label-input" for="Category">Category</label>
+                    <select name="Category" class="category" class="input-fields">
+                        <option value="any">Any Category</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="21">Sports</option>
+                        <option value="23">History</option>
+                        <option value="24">Politics</option>
+                        <option value="26">Celebrities</option>
+                        <option value="27">Animals</option>
+                        <option value="28">Vehicles</option>
+                    </select>
+
+                </div>
+                <div class="form-field  f-f-choice">
+                    <label class="label-input" for="type">Select question type</label>
+                    <select name="type" class="type" class="input-fields">
+                        <option value="any">Any Type</option>
+                        <option value="multiple">Multiple Choice</option>
+                        <option value="boolean">True / False</option>
+                    </select>
+                </div>
+                <div class="form-field  f-f-difficulty">
+                    <label class="label-input" for="level">Select Difficulty level</label>
+                    <select name="level" class="level" class="input-fields">
+                        <option value="any">Any Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="btn-field">
+                    <input class="btn" type="submit" value="Start">
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="screen screen-2">
+        <div class="screen-2-container">
+            <div class="question-header">
+                <div class="question-p">
+                    <p>Question
+                    <p class="questionNumber">0</p> of <p class="totalQuestion">0</p>
+                    </p>
+                </div>
+                <div class="current-score">
+                    <p>Current score :
+                    <p class="currentScore">0</p>
+                    </p>
+                </div>
+            </div>
+            <div class="question">
+            </div>
+            <div class="question-btn">
+                <button id="next-quiz" data-question="0" class="btn next-quiz">Next Question</button>
+                <button class="btn quit-quiz">Quit Quiz</button>
+            </div>
+        </div>
+    </section>
+    <section class="screen screen-3">
+        <div class="screen-3-container">
+            <div class="total-score">
+                <p>Your total score :
+                <p class="totalScore">0</p>/
+                <p class="totalQuestion2">0</p>
+                </p>
+            </div>
+            <button class="btn new-quiz">Play New Quiz</button>
+        </div>
+    </section>
+  </body>
+</html>
